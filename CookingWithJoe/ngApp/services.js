@@ -24,4 +24,3 @@ var CookingWithJoe;
         angular.module('CookingWithJoe').service('recipeService', RecipeService);
     })(Services = CookingWithJoe.Services || (CookingWithJoe.Services = {}));
 })(CookingWithJoe || (CookingWithJoe = {}));
-//# sourceMappingURL=services.js.map

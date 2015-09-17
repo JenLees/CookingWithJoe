@@ -84,4 +84,3 @@ var CookingWithJoe;
         angular.module('CookingWithJoe').controller('AccountController', AccountController);
     })(Controllers = CookingWithJoe.Controllers || (CookingWithJoe.Controllers = {}));
 })(CookingWithJoe || (CookingWithJoe = {}));
-//# sourceMappingURL=controllers.js.map

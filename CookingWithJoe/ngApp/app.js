@@ -16,6 +16,8 @@ var CookingWithJoe;
             controller: 'RecipeAddController as vm'
         }).when('/login', {
             templateUrl: '/ngApp/login.html'
+        }).when('/register', {
+            templateUrl: '/ngApp/register.html'
         });
         $locationProvider.html5Mode(true);
     });
@@ -42,4 +44,3 @@ var CookingWithJoe;
     });
     ;
 })(CookingWithJoe || (CookingWithJoe = {}));
-//# sourceMappingURL=app.js.map
