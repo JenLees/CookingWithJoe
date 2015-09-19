@@ -77,14 +77,25 @@
 
     angular.module('CookingWithJoe').controller('RecipeAddController', RecipeAddController);
 
+
+    
+    const authenticateURL = '/Token';
+
     class AccountController {
         username: string
         password: string
         loginMessage: string
+        newuser
+
+        register() {
+            this.$http.post("/api/Account/Register", this.newuser).success(() => {
+
+            });
+        }
 
         login() {
             let data = "grant_type=password&username=" + this.username + "&password=" + this.password;
-            this.$http.post('http://website/Token', data, //what goes here? 
+            this.$http.post(authenticateURL, data,
                 {
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
                 }).success((result: any) => {
@@ -106,6 +117,7 @@
         constructor(private $http: ng.IHttpService, private $window: ng.IWindowService, private $location: ng.ILocationService) { }
     }
 
+   
     angular.module('CookingWithJoe').controller('AccountController', AccountController);
 
 } 

@@ -55,16 +55,21 @@ var CookingWithJoe;
             return RecipeAddController;
         })();
         angular.module('CookingWithJoe').controller('RecipeAddController', RecipeAddController);
+        var authenticateURL = '/Token';
         var AccountController = (function () {
             function AccountController($http, $window, $location) {
                 this.$http = $http;
                 this.$window = $window;
                 this.$location = $location;
             }
+            AccountController.prototype.register = function () {
+                this.$http.post("/api/Account/Register", this.newuser).success(function () {
+                });
+            };
             AccountController.prototype.login = function () {
                 var _this = this;
                 var data = "grant_type=password&username=" + this.username + "&password=" + this.password;
-                this.$http.post('http://website/Token', data, {
+                this.$http.post(authenticateURL, data, {
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
                 }).success(function (result) {
                     _this.$window.sessionStorage.setItem('token', result.access_token);
@@ -84,3 +89,4 @@ var CookingWithJoe;
         angular.module('CookingWithJoe').controller('AccountController', AccountController);
     })(Controllers = CookingWithJoe.Controllers || (CookingWithJoe.Controllers = {}));
 })(CookingWithJoe || (CookingWithJoe = {}));
+//# sourceMappingURL=controllers.js.map

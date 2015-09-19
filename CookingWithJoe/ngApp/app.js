@@ -3,8 +3,7 @@ var CookingWithJoe;
     angular.module('CookingWithJoe', ['ngResource', 'ngRoute'])
         .config(function ($routeProvider, $locationProvider) {
         $routeProvider.when('/', {
-            templateUrl: '/ngApp/list.html',
-            controller: 'RecipeController as vm'
+            templateUrl: '/views/Home/Index.html'
         }).when('/edit/:id', {
             templateUrl: '/ngApp/edit.html',
             controller: 'RecipeEditController as vm'
@@ -14,10 +13,14 @@ var CookingWithJoe;
         }).when('/add', {
             templateUrl: '/ngApp/add.html',
             controller: 'RecipeAddController as vm'
+        }).when('/recipe', {
+            templateUrl: '/ngApp/recipe.html'
         }).when('/login', {
-            templateUrl: '/ngApp/login.html'
+            templateUrl: '/ngApp/login.html',
+            controller: 'AccountController as vm'
         }).when('/register', {
-            templateUrl: '/ngApp/register.html'
+            templateUrl: '/ngApp/register.html',
+            controller: 'AccountController as vm'
         });
         $locationProvider.html5Mode(true);
     });
@@ -44,3 +47,4 @@ var CookingWithJoe;
     });
     ;
 })(CookingWithJoe || (CookingWithJoe = {}));
+//# sourceMappingURL=app.js.map

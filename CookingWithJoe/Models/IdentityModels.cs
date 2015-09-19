@@ -30,5 +30,6 @@ namespace CookingWithJoe.Models
             return new ApplicationDbContext();
         }
         public System.Data.Entity.DbSet<CookingWithJoe.Models.Recipe> Recipes { get; set; }
+ 
     }
 }

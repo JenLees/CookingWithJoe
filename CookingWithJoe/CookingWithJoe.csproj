@@ -74,6 +74,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -247,6 +248,30 @@
     <Compile Include="Migrations\201509170452016_edited.Designer.cs">
       <DependentUpon>201509170452016_edited.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201509182014036_edit9.18.15.cs" />
+    <Compile Include="Migrations\201509182014036_edit9.18.15.Designer.cs">
+      <DependentUpon>201509182014036_edit9.18.15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509182026142_seed.cs" />
+    <Compile Include="Migrations\201509182026142_seed.Designer.cs">
+      <DependentUpon>201509182026142_seed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509182150033_seedUSER.cs" />
+    <Compile Include="Migrations\201509182150033_seedUSER.Designer.cs">
+      <DependentUpon>201509182150033_seedUSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509182157538_seedUserReally.cs" />
+    <Compile Include="Migrations\201509182157538_seedUserReally.Designer.cs">
+      <DependentUpon>201509182157538_seedUserReally.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509182206229_seedIHope.cs" />
+    <Compile Include="Migrations\201509182206229_seedIHope.Designer.cs">
+      <DependentUpon>201509182206229_seedIHope.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509182325559_newUser.cs" />
+    <Compile Include="Migrations\201509182325559_newUser.Designer.cs">
+      <DependentUpon>201509182325559_newUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -268,11 +293,14 @@
     <Content Include="Content\bootstrap.amelia.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\flower-hawaiian-lei-clip-art-1393786.png" />
+    <Content Include="Content\surf-board-clip-art-49119.png" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="ngApp\login.html" />
+    <Content Include="ngApp\recipe.html" />
     <Content Include="ngApp\register.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
@@ -1145,6 +1173,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201509170452016_edited.resx">
       <DependentUpon>201509170452016_edited.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509182014036_edit9.18.15.resx">
+      <DependentUpon>201509182014036_edit9.18.15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509182026142_seed.resx">
+      <DependentUpon>201509182026142_seed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509182150033_seedUSER.resx">
+      <DependentUpon>201509182150033_seedUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509182157538_seedUserReally.resx">
+      <DependentUpon>201509182157538_seedUserReally.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509182206229_seedIHope.resx">
+      <DependentUpon>201509182206229_seedIHope.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509182325559_newUser.resx">
+      <DependentUpon>201509182325559_newUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

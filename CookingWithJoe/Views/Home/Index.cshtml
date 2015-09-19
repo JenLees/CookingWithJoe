@@ -3,7 +3,7 @@
 }
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="CookingWithJoe">
 <head>
-    <title></title>
+    <title>Cooking With Joe</title>
     <meta charset="utf-8" />
     <base href="/" />
     <link href="~/Content/Site.css" rel="stylesheet" />
@@ -18,8 +18,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Cooking With Joe", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
+                <a href="/" class="navbar-brand">
+                    @*<img height="50" src="~/Content/flower-hawaiian-lei-clip-art-1393786.png" />*@Cooking With Joe
+                </a>
+             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="/home/index">Home</a></li>
@@ -32,6 +34,7 @@
     </div>
     <div class="container body-content">
         <ng-view></ng-view>
+
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Cooking With Joe</p>

@@ -3,23 +3,32 @@
     angular.module('CookingWithJoe', ['ngResource', 'ngRoute'])
         .config(($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationProvider) => {
         $routeProvider.when('/', {
-            templateUrl: '/ngApp/list.html',
-            controller: 'RecipeController as vm'
+            templateUrl: '/views/Home/Index.html'
+            //controller: //'RecipeController as vm',
+
         }).when('/edit/:id', {
             templateUrl: '/ngApp/edit.html',
             controller: 'RecipeEditController as vm'
+
         }).when('/delete/:id', {
             templateUrl: '/ngApp/delete.html',
             controller: 'RecipeDeleteController as vm'
+
         }).when('/add', {
             templateUrl: '/ngApp/add.html',
             controller: 'RecipeAddController as vm'
-        }).when('/login', {
-            templateUrl: '/ngApp/login.html'
-        }).when('/register', {
-            templateUrl: '/ngApp/register.html'
-        });
 
+        }).when('/recipe', {
+            templateUrl: '/ngApp/recipe.html'
+
+        }).when('/login', {
+            templateUrl: '/ngApp/login.html',
+            controller:'AccountController as vm'
+
+        }).when('/register', {
+            templateUrl: '/ngApp/register.html',
+            controller: 'AccountController as vm'
+        });
 
             $locationProvider.html5Mode(true);
 
