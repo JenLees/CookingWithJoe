@@ -272,6 +272,10 @@
     <Compile Include="Migrations\201509182325559_newUser.Designer.cs">
       <DependentUpon>201509182325559_newUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201509200313428_edit91915.cs" />
+    <Compile Include="Migrations\201509200313428_edit91915.Designer.cs">
+      <DependentUpon>201509200313428_edit91915.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -293,12 +297,22 @@
     <Content Include="Content\bootstrap.amelia.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\desserts.jpg" />
+    <Content Include="Content\Easy-Dinner-Collage-1.jpg" />
     <Content Include="Content\flower-hawaiian-lei-clip-art-1393786.png" />
+    <Content Include="Content\hawaiianflowerbkgnd.png" />
+    <Content Include="Content\healthy-breakfast-collage-10545212.jpg" />
+    <Content Include="Content\healthy-lunch-ideas-for-weight-loss.jpg" />
+    <Content Include="Content\holidays.jpg" />
     <Content Include="Content\surf-board-clip-art-49119.png" />
+    <Content Include="Content\Tempting-Tasty-Appetizers-for-Parties-e1424730112649.jpg" />
+    <Content Include="Content\tj5.jpg" />
+    <Content Include="Content\top-ten-reasons-to-shop-trader-joes.jpg" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="ngApp\addrecipe.html" />
     <Content Include="ngApp\login.html" />
     <Content Include="ngApp\recipe.html" />
     <Content Include="ngApp\register.html" />
@@ -1162,6 +1176,7 @@
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\bootstrap-dialog\bootstrap-dialog.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>
@@ -1191,6 +1206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201509182325559_newUser.resx">
       <DependentUpon>201509182325559_newUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509200313428_edit91915.resx">
+      <DependentUpon>201509200313428_edit91915.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

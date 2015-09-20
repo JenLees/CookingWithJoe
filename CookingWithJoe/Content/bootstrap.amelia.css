@@ -235,9 +235,10 @@ th {
   select {
     background: #fff !important;
   }
-  .navbar {
-    display: none;
-  }
+    .navbar {
+        display: none;
+      
+    }
   .table td,
   .table th {
     background-color: #fff !important;
