@@ -1,13 +1,20 @@
 ﻿namespace CookingWithJoe.Controllers {
 
+
+    class HomeController {
+
+    }
+
     class RecipesController {
         public recipes
 
-        constructor(recipeService: CookingWithJoe.Services.RecipeService) { 
+        constructor(recipeService: CookingWithJoe.Services.RecipeService) {
             this.recipes = recipeService.listRecipes();
         }
     }
     angular.module('CookingWithJoe').controller('RecipesController', RecipesController);
+
+}
 
     class RecipeEditController {
         public recipeToEdit
@@ -57,28 +64,6 @@
     angular.module('CookingWithJoe').controller('RecipeDeleteController', RecipeDeleteController);
 
 
-    class RecipeAddController {
-        public recipeToAdd
-
-        public save() {
-            this.recipeService.saveRecipe(this.recipeToAdd).then(
-                () => {
-                    this.$location.path('/');
-                }
-                );
-        }
-
-        constructor
-            (
-            private recipeService: CookingWithJoe.Services.RecipeService,
-            private $location: ng.ILocationService
-            ) { }
-    }
-
-    angular.module('CookingWithJoe').controller('RecipeAddController', RecipeAddController);
-
-
-    
     const authenticateURL = '/Token';
 
     class AccountController {
@@ -89,11 +74,12 @@
 
         register() {
             this.$http.post("/api/Account/Register", this.newuser).success(() => {
-
+                this.$location.path('/');
             });
         }
 
         login() {
+            debugger
             let data = "grant_type=password&username=" + this.username + "&password=" + this.password;
             this.$http.post(authenticateURL, data,
                 {
@@ -120,4 +106,41 @@
    
     angular.module('CookingWithJoe').controller('AccountController', AccountController);
 
-} 
+  
+    class RecipeListController{
+        public showModal(recipeToAdd: string) {
+            this.$modal.open({
+                templateUrl: '/ngApp/addrecipe.html',
+                controller: DialogController,
+                controllerAs: 'modal',
+                resolve: {
+
+                    recipeToAdd: () => recipeToAdd
+                },
+                size: 'lg'
+            });
+
+        }
+        constructor(private $modal: angular.ui.bootstrap.IModalService) { }
+    }
+    angular.module('CookingWithJoe').controller('RecipeListController', RecipeListController);
+
+    class DialogController {
+        
+
+        public save() {
+
+            this.recipeService.saveRecipe(this.recipeToAdd).then(
+                () => {
+                    this.$location.path('/');
+                }
+            );
+        }
+        public ok() {
+            this.$modalInstance.close();
+        }
+        constructor(public recipeToAdd: string, private $modalInstance: angular.ui.bootstrap.IModalServiceInstance,
+            private recipeService: CookingWithJoe.Services.RecipeService, private $location: ng.ILocationService) { }
+    }
+
+

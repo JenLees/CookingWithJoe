@@ -30,7 +30,7 @@ namespace CookingWithJoe.Services
         }
         public void EditRecipe(Recipe recipe)
         {
-            var original = this.FindRecipe(recipe.RecipeId);
+            var original = this.FindRecipe(recipe.Id);
             original.RecipeName = recipe.RecipeName;
         }
         public void DeleteRecipe(int id)

@@ -10,6 +10,7 @@ namespace CookingWithJoe.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Services;
 
     public static class NinjectWebCommon 
     {
@@ -61,6 +62,8 @@ namespace CookingWithJoe.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IGenericRepository>().To<GenericRepository>();
+            kernel.Bind<IRecipeService>().To<RecipeService>();
         }        
     }
 }

@@ -18,7 +18,7 @@ namespace CookingWithJoe.API
             _recipeService = recipeService;
         }
 
-    
+
         // GET: api/Recipes
         public IEnumerable<Recipe> Get()
         {
@@ -30,11 +30,27 @@ namespace CookingWithJoe.API
         {
             return _recipeService.FindRecipe(id);
         }
-   
-    // POST: api/Recipes
-    public void Post([FromBody]string value)
+
+        // POST: api/Recipes
+        [Authorize]
+        public HttpResponseMessage Post(Recipe recipe)
         {
+            if (ModelState.IsValid)
+            {
+                if (recipe.Id == 0)
+                {
+                    _recipeService.CreateRecipe(recipe);
+                    return Request.CreateResponse(HttpStatusCode.Created, recipe);
+                }
+                else
+                {
+                    _recipeService.EditRecipe(recipe);
+                    return Request.CreateResponse(HttpStatusCode.OK, recipe);
+                }
+            }
+            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, this.ModelState);
         }
+  
 
         // PUT: api/Recipes/5
         public void Put(int id, [FromBody]string value)

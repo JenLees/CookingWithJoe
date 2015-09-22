@@ -9,7 +9,7 @@ namespace CookingWithJoe.Models
 {
     public class Recipe 
     {
-        public int RecipeId { get; set; }
+        public int Id { get; set; }
 
         [DisplayName("Recipe Name")]
         [Required(ErrorMessage = "Please enter a name for your delicious creation.")]

@@ -8,6 +8,7 @@
     <base href="/" />
     <link href="~/Content/Site.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.amelia.css" rel="stylesheet" />
+
 </head>
 <body ng-controller="AccountController as account">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -17,14 +18,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a href="/home/index" class="navbar-brand">
+                <a href="/index" class="navbar-brand">
                    Cooking With Joe
                 </a>
              </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/home/index">Home</a></li>
+                    <li><a href="/index">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/recipe">Recipes</a></li>
@@ -43,16 +47,18 @@
         </footer>
     </div>
 
-@*<a href="/login" ng-show="!account.isLoggedIn()">login</a>
-    <a href="#" ng-show="account.isLoggedIn()">logout</a>*@
 
 
 
 <script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
 <script src="~/Scripts/angular-route.min.js"></script>
 <script src="~/Scripts/angular-resource.min.js"></script>
 
+
 <script src="~/ngApp/app.js"></script>
 <script src="~/ngApp/controllers.js"></script>
+<script src="~/ngApp/services.js"></script>
+
 </body>
 </html>

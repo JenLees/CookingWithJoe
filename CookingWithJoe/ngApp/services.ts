@@ -12,10 +12,12 @@
         }
 
         public saveRecipe(recipe) {
+            debugger
             return this.RecipeResource.save(recipe).$promise;
         }
 
         public deleteRecipe(id) {
+           
             return this.RecipeResource.delete({ id: id }).$promise;
         }
 
@@ -28,3 +30,4 @@
     angular.module('CookingWithJoe').service('recipeService', RecipeService);
 
 } 
+

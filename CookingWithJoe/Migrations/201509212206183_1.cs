@@ -3,10 +3,21 @@ namespace CookingWithJoe.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class start : DbMigration
+    public partial class _1 : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Recipes",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        RecipeName = c.String(nullable: false),
+                        Ingredients = c.String(nullable: false),
+                        Directions = c.String(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
             CreateTable(
                 "dbo.AspNetRoles",
                 c => new
@@ -94,6 +105,7 @@ namespace CookingWithJoe.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.Recipes");
         }
     }
 }

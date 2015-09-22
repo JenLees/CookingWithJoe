@@ -26,7 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.6</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -240,41 +240,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201509170406229_start.cs" />
-    <Compile Include="Migrations\201509170406229_start.Designer.cs">
-      <DependentUpon>201509170406229_start.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509170452016_edited.cs" />
-    <Compile Include="Migrations\201509170452016_edited.Designer.cs">
-      <DependentUpon>201509170452016_edited.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509182014036_edit9.18.15.cs" />
-    <Compile Include="Migrations\201509182014036_edit9.18.15.Designer.cs">
-      <DependentUpon>201509182014036_edit9.18.15.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509182026142_seed.cs" />
-    <Compile Include="Migrations\201509182026142_seed.Designer.cs">
-      <DependentUpon>201509182026142_seed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509182150033_seedUSER.cs" />
-    <Compile Include="Migrations\201509182150033_seedUSER.Designer.cs">
-      <DependentUpon>201509182150033_seedUSER.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509182157538_seedUserReally.cs" />
-    <Compile Include="Migrations\201509182157538_seedUserReally.Designer.cs">
-      <DependentUpon>201509182157538_seedUserReally.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509182206229_seedIHope.cs" />
-    <Compile Include="Migrations\201509182206229_seedIHope.Designer.cs">
-      <DependentUpon>201509182206229_seedIHope.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509182325559_newUser.cs" />
-    <Compile Include="Migrations\201509182325559_newUser.Designer.cs">
-      <DependentUpon>201509182325559_newUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509200313428_edit91915.cs" />
-    <Compile Include="Migrations\201509200313428_edit91915.Designer.cs">
-      <DependentUpon>201509200313428_edit91915.cs</DependentUpon>
+    <Compile Include="Migrations\201509212206183_1.cs" />
+    <Compile Include="Migrations\201509212206183_1.Designer.cs">
+      <DependentUpon>201509212206183_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -291,6 +259,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.amelia.css" />
@@ -304,18 +274,45 @@
     <Content Include="Content\healthy-breakfast-collage-10545212.jpg" />
     <Content Include="Content\healthy-lunch-ideas-for-weight-loss.jpg" />
     <Content Include="Content\holidays.jpg" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\surf-board-clip-art-49119.png" />
     <Content Include="Content\Tempting-Tasty-Appetizers-for-Parties-e1424730112649.jpg" />
     <Content Include="Content\tj5.jpg" />
+    <Content Include="Content\tjmail.jpg" />
     <Content Include="Content\top-ten-reasons-to-shop-trader-joes.jpg" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="ngApp\about.html" />
     <Content Include="ngApp\addrecipe.html" />
+    <Content Include="Content\bisquits.png" />
+    <Content Include="Content\bluberrybisquits.png" />
+    <Content Include="Content\boilingpotatoes.png" />
+    <Content Include="Content\choppingveggies.png" />
+    <Content Include="ngApp\breakfast.html" />
+    <Content Include="ngApp\contact.html" />
+    <Content Include="Content\curryingredients.png" />
+    <Content Include="Content\dessertdone.png" />
+    <Content Include="Content\dessertingredients.png" />
+    <Content Include="Content\dinneralmostdone.png" />
+    <Content Include="Content\dinnerdone2.png" />
+    <Content Include="Content\ingredients.png" />
+    <Content Include="Content\jenwithcream.png" />
+    <Content Include="ngApp\home.html" />
     <Content Include="ngApp\login.html" />
+    <Content Include="Content\mashedpotatoesandcookingchicken.png" />
+    <Content Include="Content\moreingredients.png" />
+    <Content Include="Content\preparingcookiesheet.png" />
     <Content Include="ngApp\recipe.html" />
     <Content Include="ngApp\register.html" />
+    <Content Include="Content\slicedbusquits.png" />
+    <Content Include="Content\toastingalmonds.png" />
+    <Content Include="Content\whippedcreamafter.png" />
+    <Content Include="Content\whippedcreambefore.png" />
+    <Content Include="Content\whippedcreamduring.png" />
+    <Content Include="Content\yogurt.png" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -343,8 +340,6 @@
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
-    <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
@@ -364,26 +359,30 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Scripts\angular-route.min.js.map" />
-    <Content Include="Scripts\angular-resource.min.js.map" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootstrap-confirm.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\errors.json" />
-    <Content Include="Scripts\angular-touch.min.js.map" />
-    <Content Include="Scripts\angular-sanitize.min.js.map" />
-    <Content Include="Scripts\angular-messages.min.js.map" />
-    <Content Include="Scripts\angular-message-format.min.js.map" />
-    <Content Include="Scripts\angular-loader.min.js.map" />
-    <Content Include="Scripts\angular-cookies.min.js.map" />
-    <Content Include="Scripts\angular-aria.min.js.map" />
-    <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Scripts\errors.json" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-touch.min.js.map" />
+    <Content Include="Scripts\angular-sanitize.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\angular-resource.min.js.map" />
+    <Content Include="Scripts\angular-messages.min.js.map" />
+    <Content Include="Scripts\angular-message-format.min.js.map" />
+    <Content Include="Scripts\angular-loader.min.js.map" />
+    <Content Include="Scripts\angular-cookies.min.js.map" />
+    <Content Include="Scripts\angular-aria.min.js.map" />
+    <Content Include="Scripts\angular-animate.min.js.map" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
@@ -1128,7 +1127,6 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
-    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
@@ -1152,7 +1150,9 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml">
+      <BrowseToURL>~/index</BrowseToURL>
+    </Content>
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\version.json" />
@@ -1169,6 +1169,7 @@
     <TypeScriptCompile Include="ngApp\app.ts" />
     <TypeScriptCompile Include="ngApp\controllers.ts" />
     <TypeScriptCompile Include="ngApp\services.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angular-ui-bootstrap\angular-ui-bootstrap.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
@@ -1183,32 +1184,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509170406229_start.resx">
-      <DependentUpon>201509170406229_start.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509170452016_edited.resx">
-      <DependentUpon>201509170452016_edited.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509182014036_edit9.18.15.resx">
-      <DependentUpon>201509182014036_edit9.18.15.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509182026142_seed.resx">
-      <DependentUpon>201509182026142_seed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509182150033_seedUSER.resx">
-      <DependentUpon>201509182150033_seedUSER.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509182157538_seedUserReally.resx">
-      <DependentUpon>201509182157538_seedUserReally.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509182206229_seedIHope.resx">
-      <DependentUpon>201509182206229_seedIHope.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509182325559_newUser.resx">
-      <DependentUpon>201509182325559_newUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509200313428_edit91915.resx">
-      <DependentUpon>201509200313428_edit91915.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201509212206183_1.resx">
+      <DependentUpon>201509212206183_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
