@@ -64,6 +64,7 @@ namespace CookingWithJoe.App_Start
         {
             kernel.Bind<IGenericRepository>().To<GenericRepository>();
             kernel.Bind<IRecipeService>().To<RecipeService>();
+            kernel.Bind<ICategoryService>().To <CategoryService>();
         }        
     }
 }

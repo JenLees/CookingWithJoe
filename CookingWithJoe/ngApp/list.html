@@ -1,0 +1,8 @@
+﻿<ul>
+    <li ng-repeat="recipe in vm.recipes">
+    {{recipe.recipeName}}
+    <a href="/edit/{{recipe.id}}">edit</a>
+    <a href="/delete/{{recipe.id}}">delete</a>
+</li>
+</ul>
+

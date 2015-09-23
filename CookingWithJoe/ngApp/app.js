@@ -32,7 +32,7 @@ var CookingWithJoe;
             templateUrl: '/ngApp/contact.html'
         }).when('/breakfast', {
             templateUrl: '/ngApp/breakfast.html',
-            controller: 'RecipeAddController as vm'
+            controller: 'RecipeListController as vm'
         });
         $locationProvider.html5Mode(true);
     });
@@ -59,4 +59,3 @@ var CookingWithJoe;
     });
     ;
 })(CookingWithJoe || (CookingWithJoe = {}));
-//# sourceMappingURL=app.js.map

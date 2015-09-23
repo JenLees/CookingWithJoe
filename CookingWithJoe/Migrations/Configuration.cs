@@ -44,8 +44,8 @@ namespace CookingWithJoe.Migrations
             }
 
 
-                
-                 var recipes = new Recipe[] {
+
+            var recipes = new Recipe[] {
                          new Recipe{
                            RecipeName="Healthy Veggie Burritos",
                            Ingredients="Soy Chorizo, whole wheat tortillas, onions, zucchini, carrots, cheddar cheese, black beans, plain Greek yogurt, avocado",
@@ -53,9 +53,22 @@ namespace CookingWithJoe.Migrations
                          }
                     };
 
-                    context.Recipes.AddOrUpdate(r => r.RecipeName, recipes);
+            context.Recipes.AddOrUpdate(r => r.RecipeName, recipes);
 
+
+
+            var categories = new Category[]
+            {
+                new Category
+                {
+                    CategoryName="Breakfast"
                 }
+
+            };
+
+            context.Categories.AddOrUpdate(c => c.CategoryName, categories);
+
             }
-        }
+    }
+}
     

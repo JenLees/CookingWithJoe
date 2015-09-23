@@ -11,24 +11,23 @@ namespace CookingWithJoe.API
 {
     public class RecipesController : ApiController
     {
-        private IRecipeService _recipeService;
-
-        public RecipesController(IRecipeService recipeService)
-        {
-            _recipeService = recipeService;
-        }
-
+        private ApplicationDbContext _db = new ApplicationDbContext();
 
         // GET: api/Recipes
         public IEnumerable<Recipe> Get()
         {
-            return _recipeService.ListRecipes();
+            return _db.Recipes.OrderBy(n => n.RecipeName).ToList();
         }
 
         // GET: api/Recipes/5
-        public Recipe Get(int id)
+        public HttpResponseMessage Get (int id)
         {
-            return _recipeService.FindRecipe(id);
+            var recipe = _db.Recipes.Find(id);
+            if (recipe == null)
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+            return Request.CreateResponse(HttpStatusCode.OK, recipe);
         }
 
         // POST: api/Recipes
@@ -37,20 +36,23 @@ namespace CookingWithJoe.API
         {
             if (ModelState.IsValid)
             {
-                if (recipe.Id == 0)
+                if (recipe.Id== 0)
                 {
-                    _recipeService.CreateRecipe(recipe);
+                    _db.Recipes.Add(recipe);
+                    _db.SaveChanges();
                     return Request.CreateResponse(HttpStatusCode.Created, recipe);
                 }
                 else
                 {
-                    _recipeService.EditRecipe(recipe);
+                    var original = _db.Recipes.Find(recipe.Id);
+                    original.RecipeName = recipe.RecipeName;
+                    _db.SaveChanges();
                     return Request.CreateResponse(HttpStatusCode.OK, recipe);
+
                 }
             }
             return Request.CreateErrorResponse(HttpStatusCode.BadRequest, this.ModelState);
         }
-  
 
         // PUT: api/Recipes/5
         public void Put(int id, [FromBody]string value)
@@ -58,8 +60,18 @@ namespace CookingWithJoe.API
         }
 
         // DELETE: api/Recipes/5
-        public void Delete(int id)
+        [Authorize]
+        public HttpResponseMessage Delete(int id)
         {
+            var recipe = _db.Recipes.Find(id);
+            if (recipe == null)
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+
+            _db.Recipes.Remove(recipe);
+            _db.SaveChanges();
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
     }
 }

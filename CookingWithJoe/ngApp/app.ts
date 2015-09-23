@@ -42,7 +42,7 @@
 
             }).when('/breakfast', {
                 templateUrl: '/ngApp/breakfast.html',
-                controller: 'RecipeAddController as vm'
+                controller: 'RecipeListController as vm'
 
             });
 
@@ -79,10 +79,5 @@
     angular.module('CookingWithJoe').config(function ($httpProvider) {
         $httpProvider.interceptors.push('authInterceptor');
     });;
-
-
-
-
-
 
 } 

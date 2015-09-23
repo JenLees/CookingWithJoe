@@ -13,7 +13,6 @@ var CookingWithJoe;
                 return this.RecipeResource.get({ id: id });
             };
             RecipeService.prototype.saveRecipe = function (recipe) {
-                debugger;
                 return this.RecipeResource.save(recipe).$promise;
             };
             RecipeService.prototype.deleteRecipe = function (id) {
@@ -25,4 +24,4 @@ var CookingWithJoe;
         angular.module('CookingWithJoe').service('recipeService', RecipeService);
     })(Services = CookingWithJoe.Services || (CookingWithJoe.Services = {}));
 })(CookingWithJoe || (CookingWithJoe = {}));
-//# sourceMappingURL=services.js.map
+;

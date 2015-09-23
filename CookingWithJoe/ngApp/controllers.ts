@@ -126,8 +126,7 @@
     angular.module('CookingWithJoe').controller('RecipeListController', RecipeListController);
 
     class DialogController {
-        
-
+       
         public save() {
 
             this.recipeService.saveRecipe(this.recipeToAdd).then(
@@ -143,4 +142,47 @@
             private recipeService: CookingWithJoe.Services.RecipeService, private $location: ng.ILocationService) { }
     }
 
+        
+    class CategoriesController {
+        public function($scope) {
+            var app = angular.module("CookingWithJoe", ["checklist-model"]);
+                $scope.categories = [
+                    'breakfast',
+                    'lunch',
+                    'dinner',
+                    'snacks/apps',
+                    'dessert',
+                    'holiday'
+                ];
+                $scope.recipe = {
+                    categories: ['recipe']
+                };
+                $scope.checkAll = function () {
+                    $scope.recipe.categories = angular.copy($scope.categories);
+                };
+                $scope.uncheckAll = function () {
+                    $scope.recipe.categories = [];
+                };
+                $scope.checkFirst = function () {
+                    $scope.recipe.categories.splice(0, $scope.recipe.categories.length);
+                    $scope.recipe.categories.push('breakfast');
+                };
+                $scope.getCategories = function () {
+                    return $scope.recipe.categories;
+                };
+                $scope.check = function (value, checked) {
+                    var idx = $scope.recipe.categories.indexOf(value);
+                    if (idx >= 0 && !checked) {
+                        $scope.recipe.categories.splice(idx, 1);
+                    };
+                    if (idx < 0 && checked) {
+                        $scope.recipe.categories.push(value);
 
+                        angular.module('CookingWithJoe').controller('CategoriesController', CategoriesController);
+
+
+                    }
+                }
+            };
+        }
+    

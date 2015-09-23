@@ -1,0 +1,19 @@
+﻿<form ng-submit="vm.save()">
+    <div>
+        <label>
+           Recipe Name: <input ng-model="vm.recipeToEdit.RecipeName"/>
+        </label>
+        <div>
+            <label>
+                Ingredients: <input ng-model="vm.recipeToEdit.Ingredients" />
+            </label>
+        </div>
+        <div>
+            <label>
+                Directions: <input ng-model="vm.recipeToEdit.Directions" />
+            </label>
+        </div>
+
+    </div>
+            <input type="submit" value="Save"/>
+</form>

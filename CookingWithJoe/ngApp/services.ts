@@ -12,7 +12,6 @@
         }
 
         public saveRecipe(recipe) {
-            debugger
             return this.RecipeResource.save(recipe).$promise;
         }
 
@@ -28,6 +27,6 @@
     }
 
     angular.module('CookingWithJoe').service('recipeService', RecipeService);
-
-} 
+    
+};
 

@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using System.Data.Entity;
 
 namespace CookingWithJoe.Models
 {
@@ -24,12 +25,15 @@ namespace CookingWithJoe.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        
+
+        public IDbSet <Recipe> Recipes{ get; set; }
+        public IDbSet <Category> Categories { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
-        public System.Data.Entity.DbSet<CookingWithJoe.Models.Recipe> Recipes { get; set; }
+        
  
     }
 }
